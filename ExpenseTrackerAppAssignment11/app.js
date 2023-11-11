@@ -7,7 +7,6 @@ const sequelize = require('./config/db');
 const Expenses = require('./models/expenses');
 const User = require('./models/users');
 const Orders = require('./models/orders');
-const Downloads = require('./models/downloads');
 
 const mainPageRouter = require('./routes/mainpage');
 const userRouter = require('./routes/user');
@@ -32,10 +31,7 @@ Expenses.belongsTo(User, {
 });
 
 User.hasMany(Orders);
-Orders.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
-
-User.hasMany(Downloads);
-Downloads.belongsTo(User,{constraints:true,onDelete:'CASCADE'});
+Orders.belongsTo(User, {constraints: true, onDelete: 'CASCADE'});
 
 app.use(mainPageRouter);
 app.use('/user', userRouter);

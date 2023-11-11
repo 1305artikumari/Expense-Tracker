@@ -44,8 +44,8 @@ let currentPage = 1;
 let hasMoreExpenses;
 let hasPreviousExpenses;
 let noitem = 5;
-
 setupProfile();
+
 refresh();
 function showOutput(response) {
     elements.expensePlaceholder.innerHTML = "";
@@ -163,12 +163,11 @@ async function setupProfile() {
 
 async function purchasepremium() {
     try {
-          debugger
         document.getElementById('confirmationdiv').innerHTML = `<strong>Hi ${userName}</strong>`
         const response = await authenticatedAxios.get("purchase/premiummembership");
 
         const { key_id, orderid } = response.data;
-       
+
         const { name, email } = response.data.user;
         var options = {
             "key": key_id,
