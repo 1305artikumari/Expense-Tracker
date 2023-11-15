@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day to Day Expenses</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #f8f9fa; /* Light Gray */
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #28a745; /* Green */
+        }
+
+        h2 {
+            color: #007bff; /* Blue */
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        th {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+
+        tfoot {
+            background-color: #d4edda; /* Light Green */
+        }
+
+        .download-button, .back-button {
+            position: fixed;
+            font-size: 24px;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-button {
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+
+        .back-button {
+            top: 20px;
+            right: 20px;
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1 class="text-center">Day to Day Expenses</h1>
+    <h2 class="text-center">Year 2023</h2>
+
+    <!-- Second Heading for November 2023 -->
+    <h2 class="text-center mt-4">November, 2023</h2>
+
+    <div class="table-responsive">
+        <!-- Monthly Expenses Table -->
+        <table class="table table-bordered mt-4">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Income</th>
+                <th>Expense</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Demo Row -->
+            <tr>
+                <td>2023-11-01</td>
+                <td>Groceries</td>
+                <td>Food</td>
+                <td>$500</td>
+                <td>$80</td>
+            </tr>
+            <!-- Another Demo Row -->
+            <tr>
+                <td>2023-11-05</td>
+                <td>Utilities</td>
+                <td>Household</td>
+                <td>$0</td>
+                <td>$120</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <!-- Total Row -->
+            <tr class="text-success">
+                <td colspan="3"></td>
+                <td>Total Income: $500</td>
+                <td>Total Expense: $200</td>
+            </tr>
+            <!-- Savings Row -->
+            <tr class="text-success">
+                <td colspan="4"></td>
+                <td>Savings: $300 (Income - Expense)</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Third Heading for Yearly Report -->
+    <h2 class="text-center mt-4">Yearly Report</h2>
+
+    <div class="table-responsive mt-4">
+        <!-- Yearly Report Table -->
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Month</th>
+                <th>Income</th>
+                <th>Expense</th>
+                <th>Saving</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Yearly Report Rows (Add more rows for each month) -->
+            <tr>
+                <td>January</td>
+                <td>$1000</td>
+                <td>$200</td>
+                <td>$800</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>$1200</td>
+                <td>$250</td>
+                <td>$950</td>
+            </tr>
+            <!-- Add more months as needed -->
+            </tbody>
+            <tfoot>
+            <!-- Total Row for Yearly Report -->
+            <tr class="text-success">
+                <td>Total</td>
+                <td>$2200</td>
+                <td>$450</td>
+                <td>$1750</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Download Button -->
+    <button class="download-button">&#x1F4E5;</button>
+    
+    <!-- Back Button -->
+    <button class="back-button" onclick="window.location.href='/user'">&#8592;</button>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js scripts here -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
